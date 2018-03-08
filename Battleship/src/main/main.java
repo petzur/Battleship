@@ -18,8 +18,15 @@ public class main {
  
    
    Player Player1 = new Player(Board.create(),2);
+   Player1.Hitboard();
    Player1.setShip();
-   Player1.printBoard(Player1);
+   
+   
+   Player Player2 = new Player(Board.create(),2);
+   Player2.setShip();
+   Player2.attack(Player1);
+   
+    
     }
   
 }
@@ -30,7 +37,7 @@ public class main {
     // 32x32 size board(Working !!!)
     // 1) 1 ship - size 4 length(Working !!!)
     // 2) 2 Players - 2 Boards ( Working !!!)
-    // 3) Place more ships ( Not Working !!! )
+    // 3) Place more ships ( Working !!! )
     // 3)Gamelogic - hitting ship or not. (coding...)
     // 4) switching boards. (Working !!!) 
     // 5) clear console (coding...) Nassim

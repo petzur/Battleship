@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Player {
     
-    private int ships;
+    private final int ships;
     private char[][] Playerboard;
     
     
@@ -38,10 +38,7 @@ public class Player {
             System.out.println("Set poistion Ship startwidth");
             setw = sc.nextInt();
             
-            if(this.Playerboard[seth][setw] != '*') set = true;
-            
-            if(this.Playerboard[seth][setw] == '*' || seth >=31 || setw >=31) 
-            System.out.println("Can't put Ship!");
+            set = Collision(seth,setw,set);
         }
         
         Ship[] battleships = new Ship[this.ships+1];
@@ -60,5 +57,57 @@ public class Player {
             System.out.println();
         }
     }
+    
+    public void attack(Player Player){
+         
+        Scanner sc = new Scanner(System.in);
+        boolean set = false;
+        boolean hit = true;
+        int attackw = 0;
+        int attackh = 0;
+        
+        while(set!=true){
+            System.out.println("---------ATTACK----------");
+            System.out.println("Attack y coordinate");
+            attackw = sc.nextInt();
+            System.out.println("Attack x coordinate");
+            attackh = sc.nextInt();
+            
+            set = Collision(attackh,attackw,set);
+          }
+         
+        if(Player.Playerboard[attackh][attackw]=='O'){
+            System.out.println("HIT SHIP AT :  " +
+                            attackw+"  "+attackh  ); 
+            hit=true;
+        }  
+        
+        else{ System.out.println("MISSED THE SHIP AT :  " +
+                            attackw+"  "+attackh);
+        }
+        
+        Hitboard(); 
+    }
+    
+    
+    
+    
+    public boolean Collision(int seth,int setw, boolean collision){
+        if(this.Playerboard[seth][setw] != '*') collision = true;
+            
+            if(this.Playerboard[seth][setw] == '*' || seth >=31 || setw >=31){ 
+            System.out.println("Can't put Ship!");
+            collision = false;
+            }
+            
+            return collision;
+    
+    }
+
+    void Hitboard() {
+        
+    }
+        
+    
     
 }

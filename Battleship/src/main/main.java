@@ -21,8 +21,11 @@ public class main {
    Player1.setShip();
    Player1.printBoard();
 
-   //Player Player2 = new Player(Board.create(),1);
-   //Player2.setShip();
+
+   Player Player2 = new Player(Board.create(),1);
+   Player2.setShip();
+   Player1.printBoard();
+
    
     }
   

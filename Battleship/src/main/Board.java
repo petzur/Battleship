@@ -14,20 +14,18 @@ public class Board {
 
    
     public static char[][] create() {
-        char[][] board = new char[32][32];
-
-        for(int k = 0 ; k <32;k++) {
-            board[k][0] = '*';
-            board[0][k] = '*';
-            System.out.print(board[k][k]);
+         
+         char[][] board = new char[32][32];
+        for(int i = 0 ; i <32;i++) {
+            for(int j = 0; j<32;j++){
+                if(i==0 || i==31)board[i][j]='*';
+                if(j==0 || j==31)board[i][j]='*';
+                System.out.print(board[i][j]);
+            }     
+            System.out.println();
         }
-        for(int i = 0 ; i <=31;i++) {
-            for(int j = 0 ; j<=31;j++) {
-            System.out.print(board[j]);
-            }
-        }
-        
         return board;
+        
     }
     
 }

@@ -18,19 +18,23 @@ public class main {
  
 
    Player Player1 = new Player(Board.create(),1);
-   Player Player2 = new Player(Board.create(),1);
+   //Player Player2 = new Player(Board.create(),1);
    
-   Player1.setShip();
-   Player2.setShip();
+   //Player1.setShip();
+   //Player2.setShip();
    // Player Player 2 = New Player(Board,Ship); 
     
     
-    //32x32 size board
-    // 1 ship - size 4 length
-    // 2 Players - 2 Boards
-    // Gamelogic - hitting ship or not.
-    // switching boards.
-
+   
     }
   
 }
+ 
+
+       // TASK
+
+    //32x32 size board(Nassim)
+    // 1 ship - size 4 length(waiting for check)
+    // 2 Players - 2 Boards ( waiting for check)
+    // Gamelogic - hitting ship or not. (coding...)
+    // switching boards. (coding...)

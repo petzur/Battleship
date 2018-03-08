@@ -13,13 +13,22 @@ public class Ship {
     
     public int x = 0;
     public int y = 0;
+    public Ship[] ship;
+    public char[][] board;
+    public int shiptype;
+
+    Ship(Ship[] battleships, int shiptype, char[][] Playerboard, int seth, int setw) {
+        this.board = Playerboard;
+        this.ship = battleships;
+        this.x = setw;
+        this.y = seth;
+        this.shiptype = shiptype;
+    }
 
     
-    public Ship(int shiptype,int y, int x,char[][] board){
-        
-        this.x = x;
-        this.y = y;
-        
+   
+    public char[][] buildShip (){
+         
         switch(shiptype){
             case 1: shiptype = 0;
                 for(int i = 0;i<3;i++){
@@ -29,7 +38,10 @@ public class Ship {
               for(int i = 0;i<5;i++){
                 board[y][x+i]='O';
               }
-        }
+        };
+        
+        return board;
+        
     }
     
 }

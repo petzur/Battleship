@@ -21,9 +21,7 @@ public class Board {
                 if(i==0 || i==31)board[i][j]='*';
                 else if(j==0 || j==31)board[i][j]='*';
                 else board[i][j]=' ';
-                System.out.print(board[i][j]);
             }     
-            System.out.println();
         }
         return board;
         

@@ -22,10 +22,8 @@ public class Player {
     }
       public void setShip(){
         
-        for(int i = 0;i<this.ships;i++)
-        {
-            
-        
+        for(int i = 1;i<this.ships+1;i++)
+        {    
         Scanner sc = new Scanner(System.in);
         boolean set = false;
         int seth = 0;
@@ -40,10 +38,10 @@ public class Player {
             if(this.Playerboard[seth][setw] != '*') set = true;
             
             if(this.Playerboard[seth][setw] == '*' || seth >=31 || setw >=31) 
-            System.out.println("Cant put Ship!");
+            System.out.println("Can't put Ship!");
         }
         
-        Ship[] battleships = new Ship[this.ships];
+        Ship[] battleships = new Ship[this.ships+1];
         battleships[i]= new Ship(battleships, i, Playerboard, seth, setw);
         this.Playerboard = battleships[i].buildShip();
         }

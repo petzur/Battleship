@@ -14,15 +14,18 @@ public class Ship {
     public int x = 0;
     public int y = 0;
     
-    public Ship(int y, int x){
+    public Ship(int y, int x,char[][] board){
         
         this.x = x;
         this.y = y;
         
+        for(int i = 0;i<3;i++){
+            board[y][x+i]='O';
+            
+        }
+        
     }
     
-    public static char[][] set(char[][] board){
-        
-        return board;
-    }
+    
+    
 }

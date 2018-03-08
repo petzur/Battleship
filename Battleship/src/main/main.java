@@ -18,12 +18,11 @@ public class main {
  
 
    Player Player1 = new Player(Board.create(),1);
-   Player Player2 = new Player(Board.create(),1);
    Player1.setShip();
-   Player2.setShip();
+   Player1.printBoard();
 
-    
-    
+   //Player Player2 = new Player(Board.create(),1);
+   //Player2.setShip();
    
     }
   
@@ -40,3 +39,6 @@ public class main {
     // 2) 2 Players - 2 Boards ( Working !!!)
     // 3)Gamelogic - hitting ship or not. (coding...)
     // 4) switching boards. (coding...)
+
+
+ 

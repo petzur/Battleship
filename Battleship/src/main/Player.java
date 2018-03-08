@@ -22,7 +22,23 @@ public class Player {
     }
     
     public void setShip(){
-       Ship.set(Playerboard);
+         int seth = 0;
+         int setw = 0;
+        Scanner sc = new Scanner(System.in);
+        boolean set = false;
+        
+        while(set!=true){
+            
+            System.out.println("Set poistion Ship startheight");
+             seth = sc.nextInt();
+             System.out.println("Set poistion Ship startwidth");
+             setw = sc.nextInt();
+            
+            if(this.Playerboard[seth][setw] != '*') set = true;
+        }
+        
+       Ship s1 = new Ship(seth,setw);
+
     }
 
     

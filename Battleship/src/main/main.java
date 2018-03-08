@@ -16,10 +16,10 @@ public class main {
     public static void main(String[] args){
     
  
-
+   
    Player Player1 = new Player(Board.create(),2);
    Player1.setShip();
-   Player1.printBoard();
+   Player1.printBoard(Player1);
     }
   
 }
@@ -32,7 +32,7 @@ public class main {
     // 2) 2 Players - 2 Boards ( Working !!!)
     // 3) Place more ships ( Not Working !!! )
     // 3)Gamelogic - hitting ship or not. (coding...)
-    // 4) switching boards. (coding...) Nassim
+    // 4) switching boards. (Working !!!) 
     // 5) clear console (coding...) Nassim
 
 

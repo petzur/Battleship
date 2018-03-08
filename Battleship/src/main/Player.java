@@ -5,6 +5,8 @@
  */
 package main;
 
+import java.util.Scanner;
+
 /**
  *
  * @author K3rn3l P4n1c
@@ -20,9 +22,7 @@ public class Player {
     }
     
     public void setShip(){
-        
-        System.out.println(this.ships);
-        
+       Ship.set(Playerboard);
     }
 
     

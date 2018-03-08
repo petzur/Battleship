@@ -23,6 +23,10 @@ public class Player {
     
     public void setShip(){
         
+        for(int i = 1;i<this.ships;i++)
+        {
+            
+        
         int seth = 0;
         int setw = 0;
         Scanner sc = new Scanner(System.in);
@@ -41,9 +45,9 @@ public class Player {
             System.out.println("Cant put Ship!");
         }
         
-       Ship s1 = new Ship(seth,setw,Playerboard);
+       Ship ships = new Ship(seth,setw,Playerboard,i);
        
-       
+        }
        
     }
 

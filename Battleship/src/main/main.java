@@ -37,7 +37,7 @@ public class main {
     // 32x32 size board(Working !!!)
     // 1) 1 ship - size 4 length(Working !!!)
     // 2) 2 Players - 2 Boards ( Working !!!)
-    // 3) Place more ships ( coding...) Micha
+    // 3) Place more ships ( Not Working !!! )
     // 3)Gamelogic - hitting ship or not. (coding...)
     // 4) switching boards. (coding...) Nassim
     // 5) clear console (coding...) Nassim

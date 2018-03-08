@@ -20,10 +20,9 @@ public class Player {
         this.Playerboard = Board;
         this.ships = ships;
     }
-    
-    public void setShip(){
+      public void setShip(){
         
-        for(int i = 1;i<this.ships;i++)
+        for(int i = 0;i<this.ships;i++)
         {
             
         
@@ -45,7 +44,8 @@ public class Player {
             System.out.println("Cant put Ship!");
         }
         
-       Ship ships = new Ship(seth,setw,Playerboard,i);
+        Ship[] battleships = new Ship[this.ships];
+        battleships[i] = new Ship(i,seth,setw,this.Playerboard);
        
         }
        

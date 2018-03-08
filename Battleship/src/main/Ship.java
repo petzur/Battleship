@@ -15,11 +15,10 @@ public class Ship {
     public int y = 0;
 
     
-    public Ship(int y, int x,char[][] board,int shiptype){
+    public Ship(int shiptype,int y, int x,char[][] board){
         
         this.x = x;
         this.y = y;
-
         
         switch(shiptype){
             case 1: shiptype = 0;
@@ -27,13 +26,10 @@ public class Ship {
                 board[y][x+i]='O';
                 }
             case 2: shiptype = 1;
-              for(int i = 0;i<3;i++){
+              for(int i = 0;i<5;i++){
                 board[y][x+i]='O';
               }
         }
-        
     }
-    
-    
     
 }

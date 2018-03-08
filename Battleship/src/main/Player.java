@@ -16,10 +16,13 @@ public class Player {
     private int ships;
     private char[][] Playerboard;
     
+    
     public Player(char[][] Board,int ships){
         this.Playerboard = Board;
         this.ships = ships;
     }
+    
+    
       public void setShip(){
         
         for(int i = 1;i<this.ships+1;i++)
@@ -44,14 +47,15 @@ public class Player {
         Ship[] battleships = new Ship[this.ships+1];
         battleships[i]= new Ship(battleships, i, Playerboard, seth, setw);
         this.Playerboard = battleships[i].buildShip();
+        
         }
        
     }
 
-    public void printBoard(){
-        for(int i = 0;i<this.Playerboard[0].length;i++){
-            for(int j = 0;j<this.Playerboard.length;j++){
-                System.out.print(Playerboard[i][j]);
+    public void printBoard(Player Player){
+        for(int i = 0;i<Player.this.Playerboard[0].length;i++){
+            for(int j = 0;j<Player.this.Playerboard.length;j++){
+                System.out.print(Player.Playerboard[i][j]);
             }
             System.out.println();
         }

@@ -37,7 +37,7 @@ public class Player {
             
             if(this.Playerboard[seth][setw] != '*') set = true;
             
-            if(this.Playerboard[seth][setw] == '*') 
+            if(this.Playerboard[seth][setw] == '*' || seth >=31 || setw >=31) 
             System.out.println("Cant put Ship!");
         }
         

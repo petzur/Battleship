@@ -19,7 +19,6 @@ public class main {
 
    Player Player1 = new Player(Board.create(),1);
    //Player Player2 = new Player(Board.create(),1);
-   
    //Player1.setShip();
    //Player2.setShip();
    // Player Player 2 = New Player(Board,Ship); 

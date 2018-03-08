@@ -19,7 +19,8 @@ public class Board {
         for(int i = 0 ; i <32;i++) {
             for(int j = 0; j<32;j++){
                 if(i==0 || i==31)board[i][j]='*';
-                if(j==0 || j==31)board[i][j]='*';
+                else if(j==0 || j==31)board[i][j]='*';
+                else board[i][j]=' ';
                 System.out.print(board[i][j]);
             }     
             System.out.println();

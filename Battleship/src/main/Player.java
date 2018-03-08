@@ -26,13 +26,12 @@ public class Player {
         {
             
         
-        int seth = 0;
-        int setw = 0;
         Scanner sc = new Scanner(System.in);
         boolean set = false;
+        int seth = 0;
+        int setw = 0;
         
         while(set!=true){
-            
             System.out.println("Set poistion Ship startheight");
             seth = sc.nextInt();
             System.out.println("Set poistion Ship startwidth");
@@ -45,8 +44,8 @@ public class Player {
         }
         
         Ship[] battleships = new Ship[this.ships];
-        battleships[i] = new Ship(i,seth,setw,this.Playerboard);
-       
+        battleships[i]= new Ship(battleships, i, Playerboard, seth, setw);
+        this.Playerboard = battleships[i].buildShip();
         }
        
     }

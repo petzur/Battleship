@@ -27,7 +27,7 @@ public class Ship {
 
     
    
-    public char[][] buildShip (){
+    public char[][] buildShip(){
          
         switch(shiptype){
             case 1: shiptype = 0;

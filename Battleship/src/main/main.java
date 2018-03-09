@@ -5,6 +5,9 @@
  */
 
 package main;
+
+
+
 /**
  *
  * @author K3rn3l P4n1c
@@ -14,16 +17,19 @@ package main;
 public class main {
     
     public static void main(String[] args){
-    
+
  
 
    Player Player1 = new Player(Board.create(),1);
-   Player Player2 = new Player(Board.create(),1);
+   Player Player2 = new Player(Board.create(),1); 
    Player1.setShip();
    Player2.setShip();
    Player2.attack(Player2,Player1);
    Player2.attack(Player2,Player1);
-   
+   Player2.attack(Player2,Player1);
+   Player2.attack(Player2,Player1);
+   Player2.attack(Player2,Player1);
+   Player2.attack(Player2,Player1);
     }
   
 }
@@ -37,10 +43,9 @@ public class main {
     // 3) Place more ships ( Working !!! )
     // 3) Gamelogic - hitting ship or not. (Working!!!)
     // 4) switching boards. (Working !!!) 
-    // 5) clear console (coding...) Nassim
-    // 6) Destroy Ship(coding...)
-    // 7) ShowHitBox on a 2nd Board(???)
-    // 8) WIN,LOOSE->CONDITION(coding...)
-
-
+    // 5) clear console (coding...) 
+    // 6) Destroy Ship(Working !!!)
+    // 7) ShowHitBox on a 2nd Board(Working !!!)
+    // 8) WIN,LOOSE->CONDITION(Working !!!)
+    // 9) Build different Ships(coding...)
  

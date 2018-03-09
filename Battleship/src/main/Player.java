@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Player {
     
     private final int ships;
-    private char[][] Playerboard;
+    public char[][] Playerboard;
     public String Name;
     
     
@@ -73,9 +73,9 @@ public class Player {
         while(set!=true){
             System.out.println("----"+Player.Name+"------ATTACK---"+Enemy.Name+"----");
             System.out.println("Attack y coordinate");
-            attackw = sc.nextInt();
-            System.out.println("Attack x coordinate");
             attackh = sc.nextInt();
+            System.out.println("Attack x coordinate");
+            attackw = sc.nextInt();
             
             set = Collision(attackh,attackw,set);
           }
@@ -93,14 +93,11 @@ public class Player {
         }
         
         Hitboard(Player,attackh,attackw,hit); 
-        setShots(Player,Player1shots,attackh,attackw,hit);
+        setShots(Player,Enemy,Player1shots,attackh,attackw,hit);
                 
                 
         
     }
-    
-    
-    
     
     public boolean Collision(int seth,int setw, boolean collision){
         if(this.Playerboard[seth][setw] != '*') collision = true;
@@ -127,12 +124,25 @@ public class Player {
        char[][] Player1shots = Board.create();
        char[][] Player2shots = Board.create();
     
-       public void setShots(Player Player, char[][] board, int y, int x, boolean checkhit){
+       public void setShots(Player Player,Player Enemy, char[][] board, int y, int x, boolean checkhit){
         
-           if(checkhit == true)  board[y][x]='!';
+           if(checkhit == true){  board[y][x]='!'; Enemy.Playerboard[y][x]='!';}
            if(checkhit == false) board[y][x]='X';
            
           printBoard(Player,board);
+          checkwin(Player,Enemy,Enemy.Playerboard);
+    }
+
+    private void checkwin(Player Player,Player Enemy,char[][] Playerboard) {
+        int counter = 0;
+        for(int i = 0;i<Playerboard.length;i++){
+            for(int j=0;j<Playerboard.length;j++){
+                if(Playerboard[i][j] =='O') counter++;
+            }
+        }
+        
+        if(counter == 0) System.out.println(Player.Name+" DESTROYED "+ Enemy.Name + " !!!!!!!");
+        System.out.println(counter+" "+Enemy.Name+"s Ships left");
     }
     
 }

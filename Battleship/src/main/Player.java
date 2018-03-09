@@ -15,6 +15,7 @@ public class Player {
     
     private final int ships;
     private char[][] Playerboard;
+    public String Name;
     
     
     public Player(char[][] Board,int ships){
@@ -24,10 +25,12 @@ public class Player {
     
     
       public void setShip(){
-        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Name Your CREW : ");
+        this.Name = sc.nextLine();
+          
         for(int i = 1;i<this.ships+1;i++)
         {    
-        Scanner sc = new Scanner(System.in);
         boolean set = false;
         int seth = 0;
         int setw = 0;
@@ -67,7 +70,7 @@ public class Player {
         int attackh = 0;
         
         while(set!=true){
-            System.out.println("---------ATTACK----------");
+            System.out.println("----"+Player.Name+"------ATTACK-------");
             System.out.println("Attack y coordinate");
             attackw = sc.nextInt();
             System.out.println("Attack x coordinate");
@@ -86,7 +89,7 @@ public class Player {
                             attackw+"  "+attackh);
         }
         
-        Hitboard(); 
+        Hitboard(Player,attackh,attackw); 
     }
     
     
@@ -104,8 +107,12 @@ public class Player {
     
     }
 
-    void Hitboard() {
-        
+    public String log = "";
+    public int logcounter = 0;
+    
+    void Hitboard(Player Player, int hity, int hitx) {
+        log = log + "\n"+logcounter+")"+"  Shot at "+hity +" "+ hitx;
+        System.out.println(log);
     }
         
     

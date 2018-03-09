@@ -17,12 +17,11 @@ public class main {
     
  
    
-   Player Player1 = new Player(Board.create(),2);
-   Player1.Hitboard();
+   Player Player1 = new Player(Board.create(),1);
    Player1.setShip();
    
    
-   Player Player2 = new Player(Board.create(),2);
+   Player Player2 = new Player(Board.create(),1);
    Player2.setShip();
    Player2.attack(Player1);
    

@@ -135,9 +135,11 @@ public class Player {
 
     private void checkwin(Player Player,Player Enemy,char[][] Playerboard) {
         int counter = 0;
-        for(int i = 0;i<Playerboard.length;i++){
-            for(int j=0;j<Playerboard.length;j++){
-                if(Playerboard[i][j] =='O') counter++;
+        for (char[] Playerboard1 : Playerboard) {
+            for (int j = 0; j<Playerboard.length; j++) {
+                if (Playerboard1[j] == 'O') {
+                    counter++;
+                }
             }
         }
         

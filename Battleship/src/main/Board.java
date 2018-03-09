@@ -11,7 +11,11 @@ package main;
  * @author K3rn3l P4n1c
  */
 public class Board {
-
+    
+    public char[][] Board;
+    public Board(char[][] board){
+        this.Board = board;
+    }
    
     public static char[][] create() {
          
@@ -26,6 +30,11 @@ public class Board {
         return board;
         
     }
+    
+   public static char[][] setShots(Player Player,char[][]board){
+        return board;
+    }
+
+   
 }
 
-    

@@ -24,12 +24,19 @@ public class main {
    Player Player2 = new Player(Board.create(),1); 
    Player1.setShip();
    Player2.setShip();
-   Player2.attack(Player2,Player1);
-   Player2.attack(Player2,Player1);
-   Player2.attack(Player2,Player1);
-   Player2.attack(Player2,Player1);
-   Player2.attack(Player2,Player1);
-   Player2.attack(Player2,Player1);
+   boolean win = false;
+   
+   while(win!=true){
+       
+       Player1.attack(Player1,Player2);
+       win = Player1.checkwin(Player1, Player2, Player2.Playerboard);
+       if(win == true) break;
+       Player2.attack(Player2, Player1);
+       win = Player2.checkwin(Player2, Player1, Player1.Playerboard);
+    }
+   
+    System.out.println("GG");
+    
     }
   
 }

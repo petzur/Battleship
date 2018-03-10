@@ -130,10 +130,11 @@ public class Player {
            if(checkhit == false) board[y][x]='X';
            
           printBoard(Player,board);
-          checkwin(Player,Enemy,Enemy.Playerboard);
+          
     }
 
-    private void checkwin(Player Player,Player Enemy,char[][] Playerboard) {
+    public boolean checkwin(Player Player,Player Enemy,char[][] Playerboard) {
+        boolean win = false;
         int counter = 0;
         for (char[] Playerboard1 : Playerboard) {
             for (int j = 0; j<Playerboard.length; j++) {
@@ -143,8 +144,15 @@ public class Player {
             }
         }
         
-        if(counter == 0) System.out.println(Player.Name+" DESTROYED "+ Enemy.Name + " !!!!!!!");
-        System.out.println(counter+" "+Enemy.Name+"s Ships left");
+        if(counter == 0){
+            System.out.println(Player.Name+" DESTROYED "+ Enemy.Name + " !!!!!!!");
+            win = true;
+        }
+        else{
+            System.out.println(counter+" "+Enemy.Name+"s Ships left");
+        }
+        
+        return win;
     }
     
 }

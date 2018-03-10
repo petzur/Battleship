@@ -50,9 +50,12 @@ public class main {
     // 3) Place more ships ( Working !!! )
     // 3) Gamelogic - hitting ship or not. (Working!!!)
     // 4) switching boards. (Working !!!) 
-    // 5) clear console (coding...) 
     // 6) Destroy Ship(Working !!!)
     // 7) ShowHitBox on a 2nd Board(Working !!!)
     // 8) WIN,LOOSE->CONDITION(Working !!!)
+    
+    
+        //TODO
+
     // 9) Build different Ships(coding...)
- 
+    // 5) clear console (coding...) 
